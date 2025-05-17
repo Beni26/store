@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
-import "../globals.css"
+import "../globals.css";
+import Header from "@/components/Header";
+import { SanityLive } from "@/sanity/lib/live";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -24,11 +27,16 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider dynamic>
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          suppressHydrationWarning={true}
         >
-          {children}
+          <main>
+            <Header />
+            {children}
+          </main>
+          <SanityLive />
         </body>
       </html>
     </ClerkProvider>
