@@ -6,7 +6,7 @@ const SearchPage = async ({
 }: {
   searchParams: { query: string };
 }) => {
-  const { query } = await searchParams;
+  const { query } =  searchParams;
   const products = await searchProductsByName(query)
   if(!products.length){
     return <div className="flex flex-col items-center justify-top min-he-s
