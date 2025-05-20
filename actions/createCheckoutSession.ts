@@ -15,7 +15,7 @@ export type GroupedBasketItem = {
     quantity: number;
 };
 
-const baseUrl = process.env.Vercel_URL
+const baseUrl = process.env.NODE_ENV==="production"
   ? `https://${process.env.Vercel_URL}`
   : process.env.NEXT_PUBLIC_BASE_URL;
 
