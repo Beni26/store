@@ -4,9 +4,9 @@ import { searchProductsByName } from "@/sanity/lib/products/searchProductsByName
 const SearchPage = async ({
   searchParams,
 }: {
-  searchParams: { query: string };
+  searchParams: Promise<{ query: string }>;
 }) => {
-  const { query } =  searchParams;
+  const { query } = await searchParams;
   const products = await searchProductsByName(query)
   if(!products.length){
     return <div className="flex flex-col items-center justify-top min-he-s
