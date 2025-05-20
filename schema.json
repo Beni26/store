@@ -453,14 +453,14 @@
         },
         "optional": true
       },
-      "stripChekoutSessionId": {
+      "stripeCheckoutSessionId": {
         "type": "objectAttribute",
         "value": {
           "type": "string"
         },
         "optional": true
       },
-      "stripCustomerId": {
+      "stripeCustomerId": {
         "type": "objectAttribute",
         "value": {
           "type": "string"
@@ -481,7 +481,7 @@
         },
         "optional": true
       },
-      "stripPaymentIntentId": {
+      "stripePaymentIntentId": {
         "type": "objectAttribute",
         "value": {
           "type": "string"
@@ -595,6 +595,20 @@
               "value": "cancelled"
             }
           ]
+        },
+        "optional": true
+      },
+      "orderDate": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
+      },
+      "clerkUserId": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
         },
         "optional": true
       }
